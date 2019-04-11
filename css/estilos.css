@@ -5,6 +5,8 @@
 
 body{
   background-color: black;
+  width: 900px;
+  margin: auto;
 }
 
 #cabecera{
@@ -29,7 +31,7 @@ nav{
   padding-bottom: 10px
 }
 
-a{
+nav a{
     font-family: 'DancingScriptRegular';
     color: white;
     text-shadow: 2px 2px 2px #02010a;
@@ -45,24 +47,111 @@ a{
 #imagenprincipal img{
   width: 70%;
   height: auto;
+  margin: 20px;
+  border: 1px solid;
+  filter: drop-shadow(2px 2px 2px #02010a);
 }
 
 #imagensecundaria{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  flex: 1 0 40%;
+  border: 1px;
   background-color: #d5c75f
 }
 
 #imagensecundaria img{
   border: 1px solid;
-  text-shadow: 2px 2px 2px #02010a;
+  filter: drop-shadow(2px 2px 2px #02010a);
+  width: 90%;
+  margin: 20px;
 }
 
 .caja1{
   order: 1;
+  text-align: center;
+  font-family: 'DancingScriptRegular';
+  margin-bottom: 5px;
 }
 
 .caja2{
   order: 2;
+  text-align: center;
+  font-family: 'DancingScriptRegular';
+  margin-bottom: 5px;
 }
+
+.caja1 a{
+  color: black;
+  font-size: 18px;
+}
+
+.caja2 a{
+  color: black;
+  font-size: 18px;
+}
+
+#pie{
+  width: 900px;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+}
+
+article {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+    float:left;
+    height: 100%;
+    background-color: #C6d5c5;
+    padding: 1%;
+    text-align: left;
+    height: 150px;
+  }
+
+  #contacto {
+    width: 25%;
+   }
+
+   #terminos {
+   width: 25%;
+   }
+
+   #redes {
+   width: 25%;
+   }
+
+   #derechos {
+     width: 25%;
+   }
+
+@media screen and (max-width: 900px){
+
+  #pie {
+    width: 100%;
+    margin: 0 auto;
+   }
+
+@media screen and (max-width: 480px){
+
+#pie{
+  width: 100%;
+  margin: 0 auto;
+}
+
+  #contacto {
+    width: 100%;
+   }
+
+   #terminos {
+   width: 100%;
+   }
+
+   #redes {
+   width: 100%;
+   }
+
+   #derechos {
+    width: 100%;
+   }
