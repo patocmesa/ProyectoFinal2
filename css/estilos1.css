@@ -1,3 +1,5 @@
+
+/* código tipo de fuente*/
 @font-face{
   font-family: 'DancingScriptRegular';
   src: url('DancingScriptRegular.otf');
@@ -5,36 +7,51 @@
 
 body{
   background-color: black;
-  width: 900px;
-  margin: auto;
 }
 
+/*código cabecera*/
 #cabecera{
-  width: 100%;
-  height: auto;
+  margin:0 auto;
+  width:900px;
   background-color: #5b7989;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0 ;
   -webkit-border-radius: 10px 10px 0 0;
-}
-
-#cabecera h1{
-  text-align: left;
-  padding: 25px 0 10px 10px;
-  color: white;
-  font-family: 'DancingScriptRegular';
   text-shadow: 2px 2px 2px #02010a;
 }
 
-nav{
-  text-align: right;
-  font-size: 24px;
-  padding-bottom: 10px
+#info{
+  width:100%;
+  display:flex;
+  flex-flow: nowrap;
 }
 
-nav a{
-    font-family: 'DancingScriptRegular';
-    color: white;
-    text-shadow: 2px 2px 2px #02010a;
+div[class^="cab"]{
+  width:50%;
+  padding: 1%;
+}
+
+.cab1 h1{
+  color: white;
+  font-family: 'DancingScriptRegular';
+}
+
+.cab2 nav{
+  text-align: right;
+}
+
+.cab2 a{
+  color: white;
+  font-size: 16px;
+  font-family: 'DancingScriptRegular';
+}
+
+@media only screen and (max-width: 900px) {
+  #cabecera{
+    width:100%;
+  }
+ div[class^="cab"]{
+   width:100%;
+ }
 }
 
 /*Código para el body*/
@@ -65,6 +82,47 @@ img{
     width:100%;
   }
  div[class^="foto"]{
+   width:100%;
+ }
+}
+
+.foto1 img{
+  filter: blur(10px);
+}
+
+.foto2, .foto4, .foto6 img{
+  filter: grayscale(100%);
+}
+
+.foto3 img{
+  filter: sepia(90%);
+}
+
+/*Código para el Footer*/
+
+#pie{
+  margin:0 auto;
+  width:900px;
+  border-radius: 0 0 10px 10px;
+  background-color: #C6d5c5;
+}
+
+#piepagina{
+  width:100%;
+  display:flex;
+  flex-flow: row wrap;
+}
+
+div[class^="dato"]{
+  width:23%;
+  padding: 1%;
+}
+
+@media only screen and (max-width: 900px) {
+  #pie{
+    width:100%;
+  }
+ div[class^="dato"]{
    width:100%;
  }
 }
