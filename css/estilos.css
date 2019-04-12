@@ -1,3 +1,4 @@
+/* código tipo de fuente*/
 @font-face{
   font-family: 'DancingScriptRegular';
   src: url('DancingScriptRegular.otf');
@@ -5,153 +6,235 @@
 
 body{
   background-color: black;
-  width: 900px;
-  margin: auto;
+  animation-name: slideInUp;
+  animation-duration: 2s;
 }
 
+@keyframes slideInUp{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+/*código cabecera*/
 #cabecera{
-  width: 100%;
-  height: auto;
+  margin:0 auto;
+  width:900px;
   background-color: #5b7989;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0 ;
   -webkit-border-radius: 10px 10px 0 0;
-}
-
-#cabecera h1{
-  text-align: left;
-  padding: 25px 0 10px 10px;
-  color: white;
-  font-family: 'DancingScriptRegular';
   text-shadow: 2px 2px 2px #02010a;
 }
 
-nav{
-  text-align: right;
-  font-size: 24px;
-  padding-bottom: 10px
+#info{
+  width:100%;
+  display:flex;
+  flex-flow: nowrap;
 }
 
-nav a{
-    font-family: 'DancingScriptRegular';
-    color: white;
-    text-shadow: 2px 2px 2px #02010a;
+div[class^="cab"]{
+  width:50%;
+  padding: 1%;
 }
 
-#imagenprincipal{
-  width: 100%;
-  height: auto%;
-  background-color: #82c3a6;
-  text-align: center;
-}
-
-#imagenprincipal img{
-  width: 70%;
-  height: auto;
-  margin: 20px;
-  border: 1px solid;
-  filter: drop-shadow(2px 2px 2px #02010a);
-}
-
-#imagensecundaria{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  flex: 1 0 40%;
-  border: 1px;
-  background-color: #d5c75f
-}
-
-#imagensecundaria img{
-  border: 1px solid;
-  filter: drop-shadow(2px 2px 2px #02010a);
-  width: 90%;
-  margin: 20px;
-}
-
-.caja1{
+.cab1 h1{
+  color: white;
+  font-family: 'DancingScriptRegular';
   order: 1;
-  text-align: center;
-  font-family: 'DancingScriptRegular';
-  margin-bottom: 5px;
 }
 
-.caja2{
+.cab2 nav{
+  text-align: right;
   order: 2;
-  text-align: center;
+}
+
+.cab2 a{
+  color: white;
+  font-size: 16px;
   font-family: 'DancingScriptRegular';
-  margin-bottom: 5px;
 }
 
-.caja1 a{
-  color: black;
-  font-size: 18px;
-}
-
-.caja2 a{
-  color: black;
-  font-size: 18px;
-}
-
-#pie{
-  width: 900px;
-  margin: 0 auto;
-  border-radius: 0 0 10px 10px;
-}
-
-article {
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-    box-sizing: border-box;         /* Opera/IE 8+ */
-    float:left;
-    height: 100%;
-    background-color: #C6d5c5;
-    padding: 1%;
-    text-align: left;
-    height: 150px;
+@media only screen and (max-width: 900px) {
+  #cabecera{
+    width:100% !important;
   }
 
-  #contacto {
-    width: 25%;
-   }
-
-   #terminos {
-   width: 25%;
-   }
-
-   #redes {
-   width: 25%;
-   }
-
-   #derechos {
-     width: 25%;
-   }
-
-@media screen and (max-width: 900px){
-
-  #pie {
-    width: 100%;
-    margin: 0 auto;
-   }
-
-@media screen and (max-width: 480px){
-
-#pie{
-  width: 100%;
-  margin: 0 auto;
+ div[class^="cab"]{
+   width:100%;
+ }
 }
 
-  #contacto {
-    width: 100%;
-   }
+@media  screen and (max-width: 420px) {
+  #cabecera{
+    width:100% !important;
+  }
 
-   #terminos {
-   width: 100%;
-   }
+  #info{
+    width:100%;
+    display:flex;
+    flex-flow: row wrap;
+  }
 
-   #redes {
-   width: 100%;
-   }
+ div[class^="cab"]{
+   width:100%;
+ }
 
-   #derechos {
-    width: 100%;
-   }
+ .cab1 h1{
+   text-align: center;
+  }
+
+  .cab2 nav{
+    text-align: center;
+  }
+}
+
+/*Caja Principal*/
+
+#contenido1{
+  margin:0 auto;
+  width:900px;
+  background-color: #82c3a6;
+}
+
+#principal{
+  width:100%;
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.foto1{
+  width:100%;
+  text-align: center;
+  filter: drop-shadow(2px 2px 2px #02010a);
+}
+
+img{
+  width:90%;
+  padding:5%;
+}
+
+@media only screen and (max-width: 900px) {
+  #contenido1{
+    width:100%;
+  }
+ .foto1{
+   width:100%;
+ }
+}
+
+/*Caja secundaria*/
+#contenido2{
+  margin:0 auto;
+  width:900px;
+  background-color: #d5c75f;
+}
+
+#secundaria{
+  width:100%;
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.foto2{
+  width:50%;
+  text-align: center;
+  filter: drop-shadow(2px 2px 2px #02010a);
+}
+
+.foto2 img{
+ -webkit-transition: -webkit-transform 1s ease-in-out;
+ -moz-transition: -moz-transform 1s ease-in-out;
+ transition: transform 1s ease-in-out;
+}
+.foto2:hover img{
+ -webkit-transform: rotate(10deg);
+ -moz-transform: rotate(10deg);
+ transform: rotate(10deg);
+ filter: drop-shadow(2px 2px 2px #82c3a6);
+}
+
+.foto3{
+  width:50%;
+  text-align: center;
+  filter: drop-shadow(2px 2px 2px #02010a);
+}
+
+.foto3 img{
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  -moz-transition: -moz-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+.foto3:hover img{
+  -webkit-transform: translate(20px,-5px);
+  -moz-transform: translate(20px,-5px);
+  transform: translate(20px,-5px);
+  filter: drop-shadow(2px 2px 2px #82c3a6);
+}
+
+img{
+  width:90%;
+  padding:5%;
+  }
+
+.foto2 a{
+    color: white;
+    font-family: 'DancingScriptRegular';
+    font-size: 18px;
+    text-shadow: 2px 2px 2px #02010a;
+  }
+
+.foto3 a{
+    color: white;
+    font-size: 18px;
+    font-family: 'DancingScriptRegular';
+    text-shadow: 2px 2px 2px #02010a;
+  }
+
+@media only screen and (max-width: 900px) {
+  #contenido2{
+    width:100%;
+  }
+ .foto2{
+   width:100%;
+ }
+
+ .foto3{
+   width:100%;
+}
+}
+/*Codigo de Pie de pagina*/
+#pie{
+  margin:0 auto;
+  width:900px;
+  border-radius: 0 0 10px 10px;
+  background-color: #C6d5c5;
+}
+
+#piepagina{
+  width:100%;
+  display:flex;
+  flex-flow: row wrap;
+}
+
+
+div[class^="dato"]{
+  width:23%;
+  padding: 1%;
+  font-family: 'DancingScriptRegular';
+}
+
+@media only screen and (max-width: 900px) {
+  #pie{
+    width:100%;
+  }
+ div[class^="dato"]{
+   width:100%;
+ }
+}
